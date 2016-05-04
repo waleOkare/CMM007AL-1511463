@@ -61,7 +61,7 @@
 
         <?php
 
-        $category = $_GET['category'];
+     //   $category = $_GET['category'];
 
         if(isset($_GET['category'])){
 
