@@ -67,7 +67,7 @@
 
     <aside class="grid-33 mobile-grid-66">
 
-        <img src="../resources/assets%20(1)" id="logo">
+        <img src="../resources/assets%20(1)/blog.png" id="logo">
 
 
 
