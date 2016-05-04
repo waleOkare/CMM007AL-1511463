@@ -15,6 +15,9 @@ if ($db) {
     echo "Failed to connect to the database";
 }
 
+
+
+echo " up!!!";
 ?>
 
 
