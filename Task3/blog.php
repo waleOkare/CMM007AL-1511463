@@ -16,38 +16,20 @@
 
 
         <h1> myBlog </h1>
-
         <h4> because the internet needs to know what i think </h4>
 
         <nav>
             <ul>
                 <li><a href="blog.php"> All Blog Items </a></li>
-                <li><a href="blog.php"> Work Items  </a></li>
-                <li><a href="blog.php">  University Items </a></li>
-                <li><a href="blog.php"> Family Items </a></li>
+                <li><a href="blog.php?category=Work"> Work Items  </a></li>
+                <li><a href="blog.php?category=University">  University Items </a></li>
+                <li><a href="blog.php?category=family"> Family Items </a></li>
                 <li><a href="add.php"> Insert a Blog Item </a></li>
 
             </ul>
         </nav>
 
-       <?
-     //   $BugCategory =$_GET['BugCategory'];
-
-      //  if(isset($_GET['BugCategory'])){
-          //  $BugCategory =$_GET['BugCategory'];
-
-          //  echo "<h4 align='center' id='p'>  You are in the $BugCategory category  </h4>";
-
-
-      //  }else{
-
-         //   echo '<h4 align="center" id="p"> You are looking at all the data in the database </h4>';
-      //  }
-
-    //    ?>
-
     </header>
-
 
 
 
@@ -61,18 +43,20 @@
 
         <?php
 
-     //   $category = $_GET['category'];
+        $category = $_GET['category'];
 
         if(isset($_GET['category'])){
 
-          $blogview_SQLselect = "  SELECT * FROM blogview WHERE category = '$category' ";
+          $blogview_SQLselect = "  SELECT *
+                                   FROM blogview
+                                   WHERE category = '$category' ";
 
            }else {
 
 
             $blogview_SQLselect = "  SELECT * FROM blogview ";
 
-
+        }
 
             $blogview_SQLselect_Query = mysqli_query($db, $blogview_SQLselect);
 
@@ -102,7 +86,7 @@
             }
 
             mysqli_free_result($blogview_SQLselect_Query);
-        }
+
 ?>
 
 
