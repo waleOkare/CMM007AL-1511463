@@ -44,7 +44,7 @@ ul {
 }
 
 
-ul>li {
+ul>li>a {
     float: left;
  /   width:20%
 
