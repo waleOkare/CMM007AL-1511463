@@ -35,12 +35,12 @@
 
             $category = $_GET['category'];
 
-            echo "<h4 align='center'>  You are in the $category </h4>";
+            echo "<h4 align='center'>  LOGS FROM THE <Strong>  $category </Strong> CATEGORY </h4>";
 
 
         }else{
 
-            echo '<h4 align="center"> ALL DATA ENTRY FROM <SPAN style="color: chartreuse"> MY BLOG - LOGS </SPAN>  </h4>';
+            echo '<h4 align="center"> ALL DATA ENTRY FROM  MY BLOG <SPAN style="color: chartreuse"> - LOGS </SPAN>  </h4>';
         }
 
         ?>
