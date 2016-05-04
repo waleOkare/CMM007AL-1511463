@@ -57,6 +57,50 @@
     <section class="grid-66 mobile-grid-66">
 
 
+        <?php
+        include("connection.php");
+
+        //$BugCategory = $_GET['BugCategory'];
+
+        //if(isset($_GET['BugCategory'])){
+
+        //  $bugs_SQLselect = "    SELECT * FROM bugs WHERE BugCategory = '$BugCategory' ";
+        //}else{
+
+
+
+        $blogview_SQLselect = "    SELECT *
+                               FROM blogview ";
+
+
+
+
+        $blogview_SQLselect_Query = mysqli_query($db, $blogview_SQLselect);
+
+        $indx = 1;
+        while($row = mysqli_fetch_array($blogview_SQLselect_Query, MYSQLI_ASSOC)){
+            $entryTitle = $row['entryTitle'];
+            $entrySummary = $row['entrySummary'];
+            $category =  $row['category'];
+            $submitter =  $row['submitter'];
+
+            echo ' <h4><strong>entry title </strong> </h4>' .   $entryTitle. '<br>';
+            echo '<h4><strong> entry summary </strong> </h4>' . $entrySummary.  '<br>';
+            echo '<h4><strong>category </h4></strong>' .  $category. '<br>';
+            echo '<h4><strong>submitter </h4></strong>' . $submitter. '<br>';
+            echo ' <hr>';
+
+            $indx++;
+        }
+        mysqli_free_result($blogview_SQLselect_Query);
+
+
+
+        ?>
+
+
+
+
 
 
 
