@@ -43,9 +43,11 @@
 
         <?php
 
-        $category = $_GET['category'];
+
 
         if(isset($_GET['category'])){
+
+            $category = $_GET['category'];
 
           $blogview_SQLselect = "  SELECT *
                                    FROM blogview
