@@ -46,7 +46,8 @@ ul {
 
 ul>li {
     float: left;
-    text-align: center;
+    width:25%
+
 }
 
 li a {
@@ -75,7 +76,7 @@ footer>p{
 #footer{
     background-color: crimson;
 
-    height: 150px;
+    height: 50%;
 /   clear: both;
     /*  width: 100%; */
 }
