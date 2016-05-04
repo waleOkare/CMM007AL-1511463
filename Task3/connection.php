@@ -17,7 +17,8 @@ if ($db) {
 
 
 
-echo " up!!!";
+echo " up!!!jjjjjjjjjjj";
+
 ?>
 
 
