@@ -67,7 +67,10 @@ include("connection.php");
   //  $bugs_SQLselect = "    SELECT * FROM bugs WHERE BugCategory = '$BugCategory' ";
    //}else{
 
-    $blogview_SQLselect = "    SELECT * FROM blogview ";
+
+
+    $blogview_SQLselect = "    SELECT *
+                               FROM blogview ";
 
 
 
@@ -81,17 +84,17 @@ while($row = mysqli_fetch_array($blogview_SQLselect_Query, MYSQLI_ASSOC)){
     $category =  $row['category'];
     $submitter =  $row['submitter'];
 
-    echo ' <h4><strong>Bug Name </strong> </h4>' .   $entryTitle. '<br>';
-    echo '<h4><strong> Bug Category </strong> </h4>' . $entrySummary.  '<br>';
-    echo '<h4><strong>Bug Summary </h4></strong>' .  $category. '<br>';
-    echo '<h4><strong>Bug Summary </h4></strong>' . $submitter. '<br>';
+    echo ' <h4><strong>entry title </strong> </h4>' .   $entryTitle. '<br>';
+    echo '<h4><strong> entry summary </strong> </h4>' . $entrySummary.  '<br>';
+    echo '<h4><strong>category </h4></strong>' .  $category. '<br>';
+    echo '<h4><strong>submitte </h4></strong>' . $submitter. '<br>';
     echo ' <hr>';
 
     $indx++;
 }
-mysqli_free_result($blogview_SQLselect_Query);
+         mysqli_free_result($blogview_SQLselect_Query);
 
-$db->close();
+
 
 ?>
 
