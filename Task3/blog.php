@@ -30,7 +30,7 @@
             </ul>
         </nav>
 
-    //    <?
+       <?
      //   $BugCategory =$_GET['BugCategory'];
 
       //  if(isset($_GET['BugCategory'])){
