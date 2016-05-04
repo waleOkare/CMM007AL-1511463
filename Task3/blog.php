@@ -75,7 +75,6 @@
 
             $blogview_SQLselect = "  SELECT * FROM blogview ";
 
-        }
 
             $blogview_SQLselect_Query = mysqli_query($db, $blogview_SQLselect);
 
@@ -103,8 +102,8 @@
 
                 $indx++;
             }
+        }
 
-            mysqli_free_result($blogview_SQLselect_Query);
 $db->close()
 
 ?>
