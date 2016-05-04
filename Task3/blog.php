@@ -60,53 +60,48 @@
         <?php
         include("connection.php");
 
-        //$BugCategory = $_GET['BugCategory'];
+        $category = $_GET['category'];
 
-        //if(isset($_GET['BugCategory'])){
+        if(isset($_GET['category'])){
 
-        //  $bugs_SQLselect = "    SELECT * FROM bugs WHERE BugCategory = '$BugCategory' ";
-        //}else{
+          $blogview_SQLselect = "  SELECT * FROM blogview WHERE category = '$category' ";
+
+           }else {
 
 
-
-        $blogview_SQLselect = "    SELECT *
-                               FROM blogview ";
-
+            $blogview_SQLselect = "  SELECT * FROM blogview ";
 
 
 
-        $blogview_SQLselect_Query = mysqli_query($db, $blogview_SQLselect);
+            $blogview_SQLselect_Query = mysqli_query($db, $blogview_SQLselect);
 
-        $indx = 1;
-        while($row = mysqli_fetch_array($blogview_SQLselect_Query, MYSQLI_ASSOC)){
-            $entryTitle = $row['entryTitle'];
-            $entrySummary = $row['entrySummary'];
-            $category =  $row['category'];
-            $submitter =  $row['submitter'];
-
-
+            $indx = 1;
+            while ($row = mysqli_fetch_array($blogview_SQLselect_Query, MYSQLI_ASSOC)) {
+                $entryTitle = $row['entryTitle'];
+                $entrySummary = $row['entrySummary'];
+                $category = $row['category'];
+                $submitter = $row['submitter'];
 
 
+                echo " <h3> " . "[" . $entryTitle . "]" . " by " . " $submitter " . " </h3>";
 
-              echo  " <h3> " . "[". $entryTitle."]" .   " by " . " $submitter " .  " </h3>";
+                echo '<br>';
 
-              echo'<br>';
+                echo $category;
+                echo '<br>';
+                echo '<br>';
 
-              echo  $category;
-              echo'<br>';
-              echo'<br>';
-
-             echo  $entrySummary;
-
-
-            echo ' <hr>';
+                echo $entrySummary;
 
 
-            $indx++;
-  }
+                echo ' <hr>';
 
-        mysqli_free_result($blogview_SQLselect_Query);
 
+                $indx++;
+            }
+
+            mysqli_free_result($blogview_SQLselect_Query);
+        }
 ?>
 
 
@@ -116,16 +111,7 @@
 
     </section>
 
-    <aside class="grid-33 mobile-grid-66">
 
-
-
-
-
-
-
-
-    </aside>
 
 </main>
 
