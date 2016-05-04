@@ -84,10 +84,12 @@
             $category =  $row['category'];
             $submitter =  $row['submitter'];
 
-            echo ' <h4><strong>entry title </strong> </h4>' .   $entryTitle. '<br>';
-            echo '<h4><strong> entry summary </strong> </h4>' . $entrySummary.  '<br>';
-            echo '<h4><strong>category </h4></strong>' .  $category. '<br>';
-            echo '<h4><strong>submitter </h4></strong>' . $submitter. '<br>';
+            echo    $entryTitle;
+            echo  $entrySummary;
+
+            echo  $category;
+
+            echo  $submitter;
             echo ' <hr>';
 
             $indx++;
