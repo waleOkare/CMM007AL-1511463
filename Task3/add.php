@@ -154,7 +154,7 @@
                                 <option value=" " selected disabled>Select </option>
                                 <option value="work">work</option>
                                 <option value="university">university</option>
-                                <option value="family">family</option>
+                                <option value="Family">family</option>
                             </select>
                         </label>
                     </li>
