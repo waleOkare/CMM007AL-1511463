@@ -105,6 +105,7 @@
 
         <nav>
             <ul>
+
                 <li><a href="blog.php"> All Blog Items </a></li>
                 <li><a href="blog.php"> Work Items  </a></li>
                 <li><a href="blog.php">  University Items </a></li>
