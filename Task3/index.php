@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Landing Page  </title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href=../css/unsemantic-grid-responsive-tablet.css>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href=css/unsemantic-grid-responsive-tablet.css>
 
 </head>
 
@@ -67,7 +67,7 @@
 
     <aside class="grid-33 mobile-grid-66">
 
-        <img src="../resources/assets%20(1)/blog.png" id="logo">
+        <img src="" id="logo">
 
 
 
