@@ -184,25 +184,29 @@
         }elseif($_SERVER['REQUEST_METHOD']==='POST') {
 
 
-            $bugName = $_POST['bugName'];
-            $BugCategory = $_POST['BugCategory'];
-            $BugSummary = $_POST['BugSummary'];
+            $entryTitle = $_POST['entryTitle'];
+            $entrySummary = $_POST['entrySummary'];
+            $category =  $_POST['category'];
+            $submitter =  $_POST['submitter'];
 
 
-            $bug_SQLinsert = "INSERT INTO bugs (bugName,BugCategory,BugSummary)
-                              VALUES ('$bugName', '$BugCategory', '$BugSummary');";
+            $blogview_SQLselect = "INSERT INTO blogview (entryTitle,entrySummary,category,submitter)
+                              VALUES ('$entryTitle', '$entrySummary', ' $category',' $submitter');";
 
 
-            if (mysqli_query($db, $bug_SQLinsert)) {
 
-                header("location:showbugs.php");
+            if (mysqli_query($db,$blogview_SQLselect)) {
+
+                header("location:blog.php");
+
             } else {
-                echo "Failed to add new bug";
+                echo  "Error: " . $blogview_SQLselect . "<br>" . mysqli_error($db);
 
             }
         }
         else{
-            ("location:index.php"); //not created yet
+
+          echo ("location:index.php");
         }
 
 
