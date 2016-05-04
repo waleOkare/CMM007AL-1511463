@@ -107,21 +107,7 @@
 
 
 
-<h4> [title] by [submitted] </h4>
 
-        <h4>  [Category] </h4> <br>
-
-        <h4> Summary </h4>
-
-        <hr>
-
-
-
-        <h4> [title] by [submitted] </h4>
-
-        <h4>  [Category] </h4> <br>
-
-        <h4> Summary </h4>
 
 
 
