@@ -30,6 +30,22 @@
             </ul>
         </nav>
 
+    //    <?
+     //   $BugCategory =$_GET['BugCategory'];
+
+      //  if(isset($_GET['BugCategory'])){
+          //  $BugCategory =$_GET['BugCategory'];
+
+          //  echo "<h4 align='center' id='p'>  You are in the $BugCategory category  </h4>";
+
+
+      //  }else{
+
+         //   echo '<h4 align="center" id="p"> You are looking at all the data in the database </h4>';
+      //  }
+
+    //    ?>
+
     </header>
 
 
@@ -41,8 +57,65 @@
     <section class="grid-66 mobile-grid-66">
 
 
+<?php
+include("connection.php");
 
-        <h4> [title] by [submitted] </h4>
+  //$BugCategory = $_GET['BugCategory'];
+
+       //if(isset($_GET['BugCategory'])){
+
+  //  $bugs_SQLselect = "    SELECT * FROM bugs WHERE BugCategory = '$BugCategory' ";
+   //}else{
+
+    $blogview_SQLselect = "    SELECT * FROM blogview ";
+
+
+
+
+$blogview_SQLselect_Query = mysqli_query($db, $blogview_SQLselect);
+
+$indx = 1;
+while($row = mysqli_fetch_array($blogview_SQLselect_Query, MYSQLI_ASSOC)){
+    $bugName = $row['bugName'];
+    $BugCategory = $row['BugCategory'];
+    $BugSummary =  $row['BugSummary'];
+
+    echo ' <h4><strong>Bug Name </strong> </h4>' .  $bugName. '<br>';
+    echo '<h4><strong> Bug Category </strong> </h4>' . $BugCategory.  '<br>';
+    echo '<h4><strong>Bug Summary </h4></strong>' .  $BugSummary. '<br>';
+    echo ' <hr>';
+
+    $indx++;
+}
+mysqli_free_result($blogview_SQLselect_Query);
+
+$db->close();
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4> [title] by [submitted] </h4>
 
         <h4>  [Category] </h4> <br>
 
