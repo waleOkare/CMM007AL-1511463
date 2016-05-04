@@ -84,30 +84,33 @@
             $category =  $row['category'];
             $submitter =  $row['submitter'];
 
-            echo    $entryTitle;
-            echo  $entrySummary;
 
-            echo  $category;
 
-            echo  $submitter;
+
+
+
+
+
+
+              echo  " <h3> " . "[". $entryTitle."]" .   " by " . " $submitter " .  " </h3>";
+
+              echo'<br>';
+
+              echo  $category;
+
+              echo'<br>';
+
+             echo  $entrySummary;
+
+
             echo ' <hr>';
 
+
             $indx++;
-        }
+  }
         mysqli_free_result($blogview_SQLselect_Query);
 
-
-
-        ?>
-
-
-
-
-
-
-
-
-
+?>
 
 
 
