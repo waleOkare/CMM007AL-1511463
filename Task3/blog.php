@@ -35,7 +35,7 @@
 
             $category = $_GET['category'];
 
-            echo "<h4 align='center'>  LOGS FROM THE <Strong>  $category </Strong> CATEGORY </h4>";
+            echo "<h4 align='center'>  LOGS FROM THE <Strong style='color: chartreuse'>  $category </Strong> CATEGORY </h4>";
 
 
         }else{
