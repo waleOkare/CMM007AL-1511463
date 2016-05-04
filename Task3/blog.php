@@ -52,13 +52,14 @@
 
 
 
+    <?php
+    include("connection.php");
 
+     ?>
 
     <section class="grid-66 mobile-grid-66">
 
-
         <?php
-        include("connection.php");
 
         $category = $_GET['category'];
 
