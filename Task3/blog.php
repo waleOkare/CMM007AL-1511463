@@ -28,6 +28,23 @@
 
             </ul>
         </nav>
+        <?
+        $category = $_GET['category'];
+
+        if(isset($_GET['category'])){
+
+            $category = $_GET['category'];
+
+            echo "<h4 align='center'>  You are in the $category </h4>";
+
+
+        }else{
+
+            echo '<h4 align="center"> ALL DATA ENTRY FROM <SPAN style="color: chartreuse"> MY BLOG - LOGS </SPAN>  </h4>';
+        }
+
+        ?>
+
 
     </header>
 
