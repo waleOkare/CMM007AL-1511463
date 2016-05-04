@@ -88,16 +88,12 @@
 
 
 
-
-
-
-
               echo  " <h3> " . "[". $entryTitle."]" .   " by " . " $submitter " .  " </h3>";
 
               echo'<br>';
 
               echo  $category;
-
+              echo'<br>';
               echo'<br>';
 
              echo  $entrySummary;
