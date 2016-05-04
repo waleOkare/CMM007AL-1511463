@@ -76,13 +76,15 @@ $blogview_SQLselect_Query = mysqli_query($db, $blogview_SQLselect);
 
 $indx = 1;
 while($row = mysqli_fetch_array($blogview_SQLselect_Query, MYSQLI_ASSOC)){
-    $bugName = $row['bugName'];
-    $BugCategory = $row['BugCategory'];
-    $BugSummary =  $row['BugSummary'];
+    $entryTitle = $row['entryTitle'];
+    $entrySummary = $row['entrySummary'];
+    $category =  $row['category'];
+    $submitter =  $row['submitter'];
 
-    echo ' <h4><strong>Bug Name </strong> </h4>' .  $bugName. '<br>';
-    echo '<h4><strong> Bug Category </strong> </h4>' . $BugCategory.  '<br>';
-    echo '<h4><strong>Bug Summary </h4></strong>' .  $BugSummary. '<br>';
+    echo ' <h4><strong>Bug Name </strong> </h4>' .   $entryTitle. '<br>';
+    echo '<h4><strong> Bug Category </strong> </h4>' . $entrySummary.  '<br>';
+    echo '<h4><strong>Bug Summary </h4></strong>' .  $category. '<br>';
+    echo '<h4><strong>Bug Summary </h4></strong>' . $submitter. '<br>';
     echo ' <hr>';
 
     $indx++;
@@ -92,6 +94,7 @@ mysqli_free_result($blogview_SQLselect_Query);
 $db->close();
 
 ?>
+
 
 
 
