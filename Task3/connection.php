@@ -8,9 +8,11 @@ define('DB_DATABASE', 'CMM007ALDB-1511463');
 $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
 if ($db) {
-    echo 'Successful Connection to the database';
+
+    echo "Successful Connection to the database";
 } else {
-    echo 'Failed to connect to the database';
+
+    echo "Failed to connect to the database";
 }
 
 ?>
